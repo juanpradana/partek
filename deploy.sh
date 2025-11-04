@@ -80,20 +80,48 @@ fi
 echo -e "${GREEN}✅ Build completed successfully${NC}"
 echo ""
 
-# Step 4: Set correct permissions
+# Step 4: Copy missing static files (if any)
+echo -e "${YELLOW}📋 Checking for missing static files...${NC}"
+if [ -d "$APP_DIR/public" ]; then
+    # Copy favicon if missing
+    if [ ! -f "$BUILD_DIR/favicon.ico" ] && [ -f "$APP_DIR/public/favicon.ico" ]; then
+        cp "$APP_DIR/public/favicon.ico" "$BUILD_DIR/favicon.ico"
+        echo -e "${GREEN}✅ Copied favicon.ico${NC}"
+    fi
+    # Copy PWA icons if missing
+    if [ ! -f "$BUILD_DIR/pwa-192x192.png" ] && [ -f "$APP_DIR/public/pwa-192x192.png" ]; then
+        cp "$APP_DIR/public/pwa-192x192.png" "$BUILD_DIR/pwa-192x192.png"
+    fi
+    if [ ! -f "$BUILD_DIR/pwa-512x512.png" ] && [ -f "$APP_DIR/public/pwa-512x512.png" ]; then
+        cp "$APP_DIR/public/pwa-512x512.png" "$BUILD_DIR/pwa-512x512.png"
+    fi
+fi
+
+# Step 5: Set correct permissions
 echo -e "${YELLOW}🔐 Setting correct permissions...${NC}"
+# Ensure parent directories are accessible
+sudo chmod o+x /var/www 2>/dev/null || true
+sudo chmod o+x "$APP_DIR" 2>/dev/null || true
+# Set ownership and permissions for dist directory
 sudo chown -R www-data:www-data "$BUILD_DIR"
 sudo chmod -R 755 "$BUILD_DIR"
-echo -e "${GREEN}✅ Permissions set${NC}"
+# Verify Nginx can read
+if sudo -u www-data test -r "$BUILD_DIR/index.html"; then
+    echo -e "${GREEN}✅ Permissions set correctly${NC}"
+else
+    echo -e "${YELLOW}⚠️  Fixing permissions...${NC}"
+    sudo chmod -R o+r "$BUILD_DIR"
+    sudo chmod o+x "$APP_DIR" /var/www
+fi
 echo ""
 
-# Step 5: Test Nginx configuration
+# Step 6: Test Nginx configuration
 if command -v nginx &> /dev/null; then
     echo -e "${YELLOW}🔍 Testing Nginx configuration...${NC}"
     if sudo nginx -t; then
         echo -e "${GREEN}✅ Nginx configuration is valid${NC}"
         
-        # Step 6: Reload Nginx
+        # Step 7: Reload Nginx
         echo -e "${YELLOW}🔄 Reloading Nginx...${NC}"
         sudo systemctl reload nginx
         echo -e "${GREEN}✅ Nginx reloaded${NC}"
