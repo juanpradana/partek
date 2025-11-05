@@ -39,7 +39,9 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2,pdf}'],
+        // Increase max file size to accommodate larger PDFs (default is 2MB)
+        maximumFileSizeToCacheInBytes: 15 * 1024 * 1024, // 15MB
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -53,6 +55,22 @@ export default defineConfig({
               cacheableResponse: {
                 statuses: [0, 200]
               }
+            }
+          },
+          {
+            // Cache PDF files with NetworkFirst strategy
+            urlPattern: /\.pdf$/i,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'pdf-cache',
+              expiration: {
+                maxEntries: 5,
+                maxAgeSeconds: 60 * 60 * 24 * 7 // 1 week
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              },
+              networkTimeoutSeconds: 10
             }
           }
         ]
