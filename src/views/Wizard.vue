@@ -483,7 +483,7 @@ function updateStepProgress(stepIndex) {
 
 function handleCalculatorResult(result, stepIndex) {
   // Store calculator result for use in report
-  console.log('Calculator result:', result)
+  // Result is handled by the calculator component
 }
 
 async function copyToClipboard(text, label) {
@@ -491,7 +491,8 @@ async function copyToClipboard(text, label) {
     await navigator.clipboard.writeText(text)
     alert(`${label} berhasil disalin: ${text}`)
   } catch (err) {
-    console.error('Failed to copy:', err)
+    // Silently fail - clipboard access may not be available
+    alert('Gagal menyalin ke clipboard. Silakan salin secara manual.')
   }
 }
 

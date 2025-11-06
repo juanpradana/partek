@@ -134,8 +134,8 @@ onMounted(async () => {
       isLoading.value = false
     }
   } catch (error) {
-    console.warn('Could not check PDF availability:', error)
     // Don't set error yet, let iframe try to load
+    // PDF may still be available even if HEAD request fails
   }
   
   // Set a maximum loading time (10 seconds)

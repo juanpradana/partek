@@ -56,7 +56,7 @@ const calculatorStore = useCalculatorStore()
 const lastResults = computed(() => calculatorStore.lastResults)
 
 function handleResult(result) {
-  console.log('Calculator result:', result)
+  // Result is handled by the calculator component
 }
 
 function getResultTitle(key) {

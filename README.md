@@ -106,6 +106,8 @@ partek/
 │   ├── styles/              # Global styles
 │   └── utils/               # Utility functions & tests
 ├── public/                  # Static assets
+├── docs/                    # Dokumentasi
+├── scripts/                 # Script deployment dan setup
 ├── index.html
 ├── vite.config.js
 ├── package.json
