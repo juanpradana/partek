@@ -1,16 +1,16 @@
-# Partek Assistant
+# Parameter Teknis Radio FM Assistant
 
-Aplikasi web progresif (PWA) yang dibangun dengan Vue 3 dan Vite untuk memandu teknisi dalam mengukur parameter teknis (Partek) stasiun radio sesuai **SOP 92/2021 Dirjen SDPPI Kominfo**.
+Aplikasi web progresif (PWA) yang dibangun dengan Vue 3 dan Vite untuk memandu teknisi dalam mengukur parameter teknis khusus radio FM sesuai **SOP 92/2021 Dirjen SDPPI Kominfo**.
 
 ## Fitur Utama
 
 - 📊 **Dashboard** - Ringkasan statistik dan akses cepat ke semua alat
-- 🧭 **Wizard Pengukuran Partek** - Panduan interaktif langkah demi langkah dengan:
+- 🧭 **Wizard Pengukuran Parameter Teknis Radio FM** - Panduan interaktif langkah demi langkah dengan:
   - Prasyarat dan peringatan keselamatan
   - Pengaturan rekomendasi Spectrum Analyzer (dapat disalin)
   - Checklist langkah-langkah prosedural
   - Integrasi langsung dengan kalkulator
-- 🧮 **Toolkit Kalkulator** - Perhitungan parameter teknis otomatis:
+- 🧮 **Toolkit Kalkulator** - Perhitungan parameter teknis radio FM otomatis:
   - Konversi Satuan (dBµV ↔ dBµV/m)
   - Lebar Pita Terpakai (OBW)
   - Effective Radiated Power (ERP)
@@ -89,7 +89,7 @@ Lihat `PUBLIC_ASSETS.md` untuk detail lebih lanjut.
 ## Struktur Project
 
 ```
-partek/
+parameter-teknis-radio-fm/
 ├── src/
 │   ├── components/          # Komponen Vue
 │   │   ├── calculators/     # Komponen kalkulator
@@ -118,7 +118,7 @@ partek/
 
 1. **Dashboard**: Lihat ringkasan dan akses cepat ke semua fitur
 2. **Wizard**: Pilih jenis pengukuran dan ikuti panduan langkah demi langkah
-3. **Kalkulator**: Gunakan kalkulator untuk perhitungan parameter teknis
+3. **Kalkulator**: Gunakan kalkulator untuk perhitungan parameter teknis radio FM
 4. **Form Laporan**: Isi form laporan dengan data hasil pengukuran (dapat auto-fill dari kalkulator)
 
 ## Fitur PWA
@@ -130,4 +130,4 @@ Setelah di-build, aplikasi dapat diinstall sebagai PWA:
 
 ## Lisensi
 
-Proyek ini dibuat untuk keperluan teknis sesuai SOP 92/2021 Dirjen SDPPI Kominfo.
+Proyek ini dibuat untuk keperluan pengukuran parameter teknis khusus radio FM sesuai SOP 92/2021 Dirjen SDPPI Kominfo.

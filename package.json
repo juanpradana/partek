@@ -1,8 +1,8 @@
 {
-  "name": "partek-assistant",
+  "name": "parameter-teknis-radio-fm-assistant",
   "version": "1.0.0",
   "type": "module",
-  "description": "Aplikasi web progresif untuk memandu teknisi dalam mengukur parameter teknis stasiun radio sesuai SOP 92/2021",
+  "description": "Aplikasi web progresif untuk memandu teknisi dalam mengukur parameter teknis khusus radio FM sesuai SOP 92/2021",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

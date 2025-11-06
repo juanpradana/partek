@@ -2,7 +2,7 @@
   <Layout>
     <div class="container">
       <div class="wizard-header">
-        <h1>🧭 Wizard Pengukuran Partek</h1>
+        <h1>🧭 Wizard Pengukuran Parameter Teknis Radio FM</h1>
         <p class="subtitle">Panduan interaktif langkah demi langkah sesuai SOP 92/2021</p>
       </div>
 
@@ -165,7 +165,7 @@ const measurementTypes = [
     id: 'frequency',
     name: 'Frekuensi Kerja',
     icon: '📡',
-    description: 'Pengukuran frekuensi kerja stasiun radio',
+    description: 'Pengukuran frekuensi kerja stasiun radio FM',
     prerequisites: [
       'Pastikan S/N ≥ 60 dB',
       'Kondisi Line of Sight (LOS) terpenuhi',

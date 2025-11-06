@@ -53,7 +53,7 @@
 
         <!-- Parameter Teknis -->
         <section class="form-section">
-          <h2>Parameter Teknis</h2>
+          <h2>Parameter Teknis Radio FM</h2>
           <div class="form-grid grid grid-2">
             <div class="input-group">
               <label>Frekuensi Kerja (MHz) <span class="required">*</span></label>
@@ -464,7 +464,7 @@ function saveDraft() {
     status: 'draft'
   }
   drafts.value.push(draft)
-  localStorage.setItem('pertek-drafts', JSON.stringify(drafts.value))
+  localStorage.setItem('param-fm-drafts', JSON.stringify(drafts.value))
   alert('Draft berhasil disimpan!')
 }
 
@@ -478,7 +478,7 @@ function loadDraft(draft) {
 function deleteDraft(id) {
   if (confirm('Yakin ingin menghapus draft ini?')) {
     drafts.value = drafts.value.filter(d => d.id !== id)
-    localStorage.setItem('pertek-drafts', JSON.stringify(drafts.value))
+    localStorage.setItem('param-fm-drafts', JSON.stringify(drafts.value))
   }
 }
 
@@ -545,7 +545,7 @@ function formatDate(dateString) {
 
 onMounted(() => {
   // Load drafts from localStorage
-  const savedDrafts = localStorage.getItem('pertek-drafts')
+  const savedDrafts = localStorage.getItem('param-fm-drafts')
   if (savedDrafts) {
     drafts.value = JSON.parse(savedDrafts)
   }

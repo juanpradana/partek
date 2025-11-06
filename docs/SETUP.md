@@ -1,4 +1,4 @@
-# Setup Guide - Partek Assistant
+# Setup Guide - Parameter Teknis Radio FM Assistant
 
 ## Prasyarat
 

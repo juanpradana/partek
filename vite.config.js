@@ -10,9 +10,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'Partek Assistant',
-        short_name: 'Partek',
-        description: 'Aplikasi panduan pengukuran parameter teknis stasiun radio sesuai SOP 92/2021',
+        name: 'Parameter Teknis Radio FM Assistant',
+        short_name: 'Param FM',
+        description: 'Aplikasi panduan pengukuran parameter teknis khusus radio FM sesuai SOP 92/2021',
         theme_color: '#1a1a2e',
         background_color: '#16213e',
         display: 'standalone',

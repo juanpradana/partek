@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script Setup Server untuk Partek Assistant
+# Script Setup Server untuk Parameter Teknis Radio FM Assistant
 # Jalankan script ini sekali untuk setup awal VPS Ubuntu
 # Usage: sudo ./server-setup.sh
 
@@ -14,7 +14,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${BLUE}🚀 Partek Assistant - Server Setup${NC}"
+echo -e "${BLUE}🚀 Parameter Teknis Radio FM Assistant - Server Setup${NC}"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 

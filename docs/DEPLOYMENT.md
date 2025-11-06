@@ -1,6 +1,6 @@
 # Panduan Deployment ke VPS Ubuntu
 
-Panduan lengkap untuk mendeploy aplikasi Partek Assistant ke VPS Ubuntu dengan subdomain `partek.farzani.space`.
+Panduan lengkap untuk mendeploy aplikasi Parameter Teknis Radio FM Assistant ke VPS Ubuntu dengan subdomain `partek.farzani.space`.
 
 ## Prasyarat
 

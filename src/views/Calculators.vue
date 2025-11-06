@@ -3,7 +3,7 @@
     <div class="container">
       <div class="calculators-header">
         <h1>🧮 Toolkit Kalkulator</h1>
-        <p class="subtitle">Perhitungan parameter teknis otomatis</p>
+        <p class="subtitle">Perhitungan parameter teknis radio FM otomatis</p>
       </div>
 
       <div class="calculators-grid grid grid-2">

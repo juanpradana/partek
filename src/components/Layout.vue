@@ -3,7 +3,7 @@
     <nav class="navbar glass-card">
       <div class="nav-content">
         <div class="nav-brand">
-          <h1>📡 Partek Assistant</h1>
+          <h1>📡 Parameter Teknis Radio FM</h1>
         </div>
         <button @click="toggleMobileMenu" class="mobile-menu-toggle" aria-label="Toggle menu">
           <span class="hamburger-line" :class="{ active: isMobileMenuOpen }"></span>

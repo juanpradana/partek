@@ -3,11 +3,11 @@
     <div class="container">
       <div class="pdf-viewer-header">
         <h1>📚 SOP 92/2021</h1>
-        <p class="subtitle">Pedoman Pengukuran Parameter Teknis SFR</p>
+        <p class="subtitle">Pedoman Pengukuran Parameter Teknis Radio FM SFR</p>
         <div class="pdf-actions">
           <a 
             :href="pdfUrl" 
-            download="SOP-92-2021-Pedoman-Pengukuran-Parameter-Teknis-SFR.pdf"
+            download="SOP-92-2021-Pedoman-Pengukuran-Parameter-Teknis-Radio-FM-SFR.pdf"
             class="btn btn-primary"
           >
             📥 Unduh PDF
@@ -47,7 +47,7 @@
           ref="pdfIframe"
           :src="pdfUrl"
           class="pdf-iframe"
-          title="SOP 92/2021 Pedoman Pengukuran Parameter Teknis SFR"
+          title="SOP 92/2021 Pedoman Pengukuran Parameter Teknis Radio FM SFR"
           @load="onIframeLoad"
           @error="onIframeError"
         ></iframe>
@@ -58,7 +58,7 @@
           :src="pdfUrl"
           type="application/pdf"
           class="pdf-iframe"
-          title="SOP 92/2021 Pedoman Pengukuran Parameter Teknis SFR"
+          title="SOP 92/2021 Pedoman Pengukuran Parameter Teknis Radio FM SFR"
         />
       </div>
 

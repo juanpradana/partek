@@ -28,19 +28,19 @@
         <router-link to="/wizard" class="quick-card glass-card">
           <div class="quick-icon">🧭</div>
           <h3>Wizard Pengukuran</h3>
-          <p>Panduan interaktif langkah demi langkah untuk pengukuran Partek</p>
+          <p>Panduan interaktif langkah demi langkah untuk pengukuran parameter teknis radio FM</p>
         </router-link>
 
         <router-link to="/calculators" class="quick-card glass-card">
           <div class="quick-icon">🧮</div>
           <h3>Kalkulator</h3>
-          <p>Alat perhitungan parameter teknis: ERP, OBW, Modulasi, dll</p>
+          <p>Alat perhitungan parameter teknis radio FM: ERP, OBW, Modulasi, dll</p>
         </router-link>
 
         <router-link to="/sop" class="quick-card glass-card">
           <div class="quick-icon">📚</div>
           <h3>SOP 92/2021</h3>
-          <p>Pedoman pengukuran parameter teknis Dirjen SDPPI Kominfo</p>
+          <p>Pedoman pengukuran parameter teknis radio FM Dirjen SDPPI Kominfo</p>
         </router-link>
       </div>
 

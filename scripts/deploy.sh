@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Script Deployment untuk Partek Assistant
+# Script Deployment untuk Parameter Teknis Radio FM Assistant
 # Usage: ./deploy.sh
 
 set -e  # Exit on error
 
-echo "🚀 Starting Partek Assistant Deployment..."
+echo "🚀 Starting Parameter Teknis Radio FM Assistant Deployment..."
 echo ""
 
 # Colors for output
